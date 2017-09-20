@@ -11,8 +11,8 @@ add(obj){
   this.tableau.push(obj);
   return (this.tableau);
 }
-delete(obj){
-  this.tableau.splice(this.tableau.indexOf(obj), 1);
+delete(index:number){
+  this.tableau.splice(index, 1);
 };
   constructor() { }
 

@@ -1,0 +1,8 @@
+<input type="text" #title/>
+<button (click)="add(title.value)">Click !</button>
+<ul>
+    <li *ngFor="let item of tableau;index as clef">
+        {{clef}} {{item}}
+        <button (click)="delete(item)">Delete</button>
+    </li>
+</ul>

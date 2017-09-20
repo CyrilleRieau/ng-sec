@@ -1,1 +1,9 @@
-<app-template></app-template>
+<app-todolist></app-todolist><br>
+<select [(ngModel)]="selectedPage">
+    <option value="boucle">Boucle</option>
+    <option value="template">Template</option>
+</select>
+
+<app-boucle *ngIf="selectedPage==='boucle'"></app-boucle>
+
+<app-template *ngIf="selectedPage==='template'"></app-template>

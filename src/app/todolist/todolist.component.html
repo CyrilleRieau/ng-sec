@@ -1,8 +1,9 @@
-<input type="text" #title/>
-<button (click)="add(title.value)">Click !</button>
+<input type="text" [(ngModel)]="newTodo">
+<!--#title/>-->
+<button (click)="addtoDo()">Click !</button>
 <ul>
-    <li *ngFor="let item of tableau; index as clef">
-        {{clef}} {{item}}
-        <button (click)="delete(clef)">Delete</button>
+    <li *ngFor="let item of liste; index as clef">
+        {{clef}} {{item.message}}
+        <button (click)="removetoDo(clef)">Delete</button>
     </li>
 </ul>

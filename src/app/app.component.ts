@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CompteurService } from './shared/compteur.service';
 
 @Component({
   selector: 'app-root',
@@ -20,4 +21,10 @@ export class AppComponent {
       this.bool=true;
     }
   }*/
+  constructor(private compteurService:CompteurService) { }
+  
+    ngOnInit() {console.log('compte initial dans app' + this.compteurService.compteur);
+      this.compteurService.increment();
+      console.log('compte initial dans app' + this.compteurService.compteur);
+    }
 }

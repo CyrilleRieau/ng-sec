@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { TemplateComponent } from './template/template.component';
 import {BoucleComponent} from './boucle/boucle.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import {TodoService} from './shared/todolist.service';
+import {CompteurService} from './shared/compteur.service';
+import {HttpClientModule} from '@angular/common/http';
+import { TodoAjaxService } from './shared/todo-ajax.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +20,14 @@ import { TodolistComponent } from './todolist/todolist.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    TodoService,
+    CompteurService,
+    TodoAjaxService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

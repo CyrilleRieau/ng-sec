@@ -9,13 +9,17 @@ import {TodoService} from './shared/todolist.service';
 import {CompteurService} from './shared/compteur.service';
 import {HttpClientModule} from '@angular/common/http';
 import { TodoAjaxService } from './shared/todo-ajax.service';
+import { ListechienComponent } from './listechien/listechien.component';
+import { ChienAjaxService } from './shared/chien-ajax.service';
+import { ChienService } from './shared/chien.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateComponent,
     BoucleComponent,
-    TodolistComponent
+    TodolistComponent,
+    ListechienComponent
    
   ],
   imports: [
@@ -26,7 +30,8 @@ import { TodoAjaxService } from './shared/todo-ajax.service';
   providers: [
     TodoService,
     CompteurService,
-    TodoAjaxService
+    TodoAjaxService,
+    ChienService
   ],
   bootstrap: [AppComponent]
 })

@@ -12,6 +12,10 @@ import { TodoAjaxService } from './shared/todo-ajax.service';
 import { ListechienComponent } from './listechien/listechien.component';
 import { ChienAjaxService } from './shared/chien-ajax.service';
 import { ChienService } from './shared/chien.service';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app.routes';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FicheChienComponent } from './fiche-chien/fiche-chien.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +23,17 @@ import { ChienService } from './shared/chien.service';
     TemplateComponent,
     BoucleComponent,
     TodolistComponent,
-    ListechienComponent
-   
+    ListechienComponent,
+    PagenotfoundComponent,
+    FicheChienComponent
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
+
   ],
   providers: [
     TodoService,

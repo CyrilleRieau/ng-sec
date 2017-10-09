@@ -1,0 +1,9 @@
+<h1>Fiche Chien</h1>
+
+<ul *ngIf="chien">
+    <li>{{chien.id}}</li>
+    <li>{{chien.dateNaissance}}</li>
+    <li>{{chien.race}}</li>
+    <li>{{chien.nom}}</li>
+</ul>
+<p *ngIf !="chien">Chien inexistant</p>

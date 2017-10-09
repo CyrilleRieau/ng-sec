@@ -1,4 +1,4 @@
-<select [(ngModel)]="selectedPage">
+<!-- <select [(ngModel)]="selectedPage">
     <option value="boucle">Boucle</option>
     <option value="template">Template</option>
     <option value="todo">Todo</option>
@@ -11,4 +11,14 @@
 
 <app-todolist *ngIf="selectedPage==='todo'"></app-todolist>
 
-<app-listechien *ngIf="selectedPage==='dog'"></app-listechien>
+<app-listechien *ngIf="selectedPage==='dog'"></app-listechien> -->
+
+<nav>
+    <ul>
+        <li><a routerLink="/boucle" routerLinkActive="active">Boucle</a></li>
+        <li><a [routerLink]="'/template'" routerLinkActive="active">Template</a></li>
+        <li><a routerLink="/todo" routerLinkActive="active">TodoList</a></li>
+        <li><a routerLink="/dog" routerLinkActive="active">DoggyList</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

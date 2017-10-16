@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FicheChienComponent } from './fiche-chien/fiche-chien.component';
+import { AjoutChienComponent } from './listechien/ajout-chien/ajout-chien.component';
+import { ModifierChienComponent } from './listechien/modifier-chien/modifier-chien.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FicheChienComponent } from './fiche-chien/fiche-chien.component';
     TodolistComponent,
     ListechienComponent,
     PagenotfoundComponent,
-    FicheChienComponent
+    FicheChienComponent,
+    AjoutChienComponent,
+    ModifierChienComponent
     
   ],
   imports: [

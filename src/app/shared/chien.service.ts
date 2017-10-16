@@ -20,4 +20,7 @@ removeDog(id:number):Promise<void>{
 getChienById(id:number):Promise<Chien>{
     return this.http.get<Chien>(this.urlApi+ '/' + id).toPromise();
 }
+update(id:number, entity:Chien):Promise<Chien>{
+    return this.http.patch<Chien>(this.urlApi+'/'+id, entity).toPromise();
+}
 }

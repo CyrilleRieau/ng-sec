@@ -7,6 +7,7 @@
         <th>Race</th>
         <th>Date Naissance</th>
         <th>Supprimer</th>
+        <th>Modifier</th>
     </tr>
     <tbody>
         <tr *ngFor="let chien of listeChien">
@@ -15,16 +16,14 @@
             <td>{{chien.race}}</td>
             <td>{{chien.dateNaissance | date:'dd/MM/yyyy'}}</td>
             <td><button (click)="removeDog(chien.id)">Supprimer</button></td>
-        </tr>
-        <tr>
-            <td>#</td>
-            <td><input type="text" [(ngModel)]="newDog.nom"></td>
-            <td><input type="text" [(ngModel)]="newDog.race"></td>
-            <td><input type="date" [(ngModel)]="newDog.dateNaissance"></td>
-            <td><button (click)="addDog()">Ajouter</button></td>
+            <td><button (click)="aModifier = chien">Modifier</button></td>
         </tr>
     </tbody>
 </table>
+
+<!--{{aModifier | json}}-->
+<app-ajout-chien [numeroChien]="listeChien.length +1" (onAdd)="addDog($event)"></app-ajout-chien>
+<app-modifier-chien *ngIf="aModifier" [chien]="aModifier" (onSave)="modifier($event)"></app-modifier-chien>
 <!--#title/>-->
 <!--<ul>
     <li *ngFor="let item of liste; index as clef">

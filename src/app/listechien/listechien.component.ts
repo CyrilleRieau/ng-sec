@@ -10,21 +10,24 @@ import {ChienAjaxService} from '../shared/chien-ajax.service';
 })
 
 export class ListechienComponent implements OnInit {
-listeChien:Chien[];
-newDog:Chien={
+listeChien:Chien[] = [];
+aModifier:Chien;
+/*newDog:Chien={
   nom:'',
   race:'',
   dateNaissance:null
-};
-addDog(){
-     this.chienService.addDog(this.newDog).then((dog)=>this.listeChien.push(dog));
+};*/
+addDog(dog:Chien){
+     this.chienService.addDog(dog).then((dog)=>this.listeChien.push(dog));
    };
 
    removeDog(id:number){
      this.chienService.removeDog(id).then(() => this.ngOnInit())
      //A la place de ngOnint, on peut écrire cela this.listeChien = this.listeChien.filter((dog)=>dog.id !==id))
    };
-  
+  modifier(chien:Chien){
+    this.chienService.update(chien.id, chien);
+  }
     constructor(private chienService:ChienService) { }
   
     ngOnInit() {

@@ -1,0 +1,11 @@
+<section>
+    <h2>Ajouter Chien n°{{numeroChien}}</h2>
+
+    <label>Nom</label>
+    <input type="text" [(ngModel)]="newDog.nom">
+    <label>Race</label>
+    <input type="text" [(ngModel)]="newDog.race">
+    <label>Naissance</label>
+    <input type="date" [(ngModel)]="newDog.dateNaissance">
+    <button (click)="addDog()">Ajouter</button>
+</section>

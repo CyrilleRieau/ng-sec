@@ -29,15 +29,21 @@
     },
     {
       "nom": "Test",
-      "race": "test",
+      "race": "Essayons",
       "dateNaissance": "2017-09-07",
       "id": 2
     },
     {
       "nom": "Test",
-      "race": "test5",
+      "race": "Essai",
       "dateNaissance": "2017-09-07",
       "id": 4
+    },
+    {
+      "nom": "tre",
+      "race": "hgfd",
+      "dateNaissance": "2017-10-18",
+      "id": 9
     }
   ]
 }
